@@ -1,4 +1,4 @@
-package com.levi.levi9petclinic;
+package levi9petclinic;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

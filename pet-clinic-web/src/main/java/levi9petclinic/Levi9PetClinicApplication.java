@@ -1,4 +1,4 @@
-package com.levi.levi9petclinic;
+package levi9petclinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
