@@ -14,7 +14,7 @@
     </parent>
     <groupId>com.levi</groupId>
     <artifactId>levi9-pet-clinic</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>levi9-pet-clinic</name>
     <description>levi9-pet-clinic</description>
 
@@ -48,7 +48,7 @@
 
     <scm>
         <developerConnection>srm:git:https://github.com/volodymyr-yastrubchak/levi9-pet-clinic-project.git</developerConnection>
-      <tag>levi9-pet-clinic-0.0.1</tag>
+      <tag>HEAD</tag>
   </scm>
 
 </project>
