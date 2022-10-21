@@ -3,11 +3,7 @@ package levi9petclinic.bootstrap;
 import levi9petclinic.model.Owner;
 import levi9petclinic.model.Vet;
 import levi9petclinic.services.OwnerService;
-import levi9petclinic.services.PetService;
 import levi9petclinic.services.VetService;
-import levi9petclinic.services.map.OwnerServiceMap;
-import levi9petclinic.services.map.PetServiceMap;
-import levi9petclinic.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -17,9 +13,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override

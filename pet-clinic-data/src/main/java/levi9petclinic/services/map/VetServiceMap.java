@@ -4,7 +4,9 @@ import java.util.Set;
 import levi9petclinic.model.Vet;
 import levi9petclinic.services.CrudService;
 import levi9petclinic.services.VetService;
+import org.springframework.stereotype.Service;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override
