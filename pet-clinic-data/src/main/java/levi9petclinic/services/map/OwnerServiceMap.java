@@ -6,9 +6,11 @@ import levi9petclinic.model.Pet;
 import levi9petclinic.services.OwnerService;
 import levi9petclinic.services.PetService;
 import levi9petclinic.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
+@Profile({"default", "map"})
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     private final PetTypeService petTypeService;

@@ -6,10 +6,12 @@ import levi9petclinic.model.Pet;
 import levi9petclinic.model.PetType;
 import levi9petclinic.model.Speciality;
 import levi9petclinic.model.Vet;
+import levi9petclinic.model.Visit;
 import levi9petclinic.services.OwnerService;
 import levi9petclinic.services.PetTypeService;
 import levi9petclinic.services.SpecialtyService;
 import levi9petclinic.services.VetService;
+import levi9petclinic.services.VisitService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -20,13 +22,15 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialtyService specialtyService;
+    private final VisitService visitService;
 
     public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
-        SpecialtyService specialtyService) {
+        SpecialtyService specialtyService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialtyService = specialtyService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -89,6 +93,13 @@ public class DataLoader implements CommandLineRunner {
         owner2.getPets().add(stepanPet);
 
         ownerService.save(owner2);
+
+        Visit murkoVisit = new Visit();
+        murkoVisit.setPet(stepanPet);
+        murkoVisit.setVisitTime(LocalDate.now());
+        murkoVisit.setDescription("Diareya");
+
+        visitService.save(murkoVisit);
 
         System.out.println("Owners loaded");
 

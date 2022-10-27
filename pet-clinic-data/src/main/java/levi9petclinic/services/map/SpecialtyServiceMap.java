@@ -3,9 +3,11 @@ package levi9petclinic.services.map;
 import java.util.Set;
 import levi9petclinic.model.Speciality;
 import levi9petclinic.services.SpecialtyService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
+@Profile({"default", "map"})
 public class SpecialtyServiceMap extends AbstractMapService<Speciality, Long> implements SpecialtyService {
 
     @Override
